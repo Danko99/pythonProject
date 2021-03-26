@@ -1,0 +1,1 @@
+print(f'ghjkiuytg {2+2*2}')
