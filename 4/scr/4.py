@@ -5,6 +5,6 @@ b = int(input())
 tmp=a
 a=b
 b=tmp
-print('a=',a, ', b=', b)
+print('a=',a, ',b=', b)
 a, b = b, a
-print('a=',a, ', b=', b)
+print('a=',a, ',b=', b)
