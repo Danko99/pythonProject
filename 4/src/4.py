@@ -1,7 +1,7 @@
 #4. Обмен значениями
 print('Введите два целых числа')
-a = int(input())
-b = int(input())
+a = int(input("a = "))
+b = int(input("b = "))
 tmp=a
 a=b
 b=tmp
