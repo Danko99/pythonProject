@@ -6,6 +6,7 @@ time2 = input()
 
 datetime_object = datetime.strptime(f'{time}', '%I:%M')
 datetime_object2 = datetime.strptime(f'{time2}', '%I:%M')
+
 if datetime_object2<datetime_object:
     print('Неверное время')
     exit()
