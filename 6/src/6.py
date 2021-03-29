@@ -9,9 +9,9 @@ print(f'Дискриминант D = {discrim}')
 if discrim > 0:
     x1 = (-b + math.sqrt(discrim)) / (2 * a)
     x2 = (-b - math.sqrt(discrim)) / (2 * a)
-    print('x1=',x1,'x2=',x2)
+    print(f'x1= {x1}' , f'x2= {x2} ')
 elif discrim == 0:
     x = -b / (2 * a)
-    print("x =", x)
+    print(f"x = {x}")
 else:
     print("Корней нет")
