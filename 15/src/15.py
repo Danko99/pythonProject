@@ -1,4 +1,7 @@
+# 15. Угадай число
 from random import randrange
+
+
 def game():
     random = randrange(100)
 
@@ -19,6 +22,7 @@ def game():
         elif s == 4:
             print(f'Вы проиграли. Было загадано: {random}')
 
+
 game()
 while True:
     flag = input('Хотите начать сначала? (1 - ДА )')
@@ -27,5 +31,3 @@ while True:
         game()
     else:
         break
-
-

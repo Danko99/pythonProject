@@ -1,9 +1,11 @@
-#14. Степень двойки
-n = int(input())
-two_in_power = 2
-power = 1
-while two_in_power <= n:
-    two_in_power *= 2
-    power += 1
+# 14. Степень двойки
+import math
 
-print(power)
+n = int(input())
+count = 0
+i = 0
+while i < n:
+    if math.pow(2, i) < n:
+        count += 1
+    i = i + 1
+print(count)
