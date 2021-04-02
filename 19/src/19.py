@@ -1,4 +1,5 @@
 # 19. Медвежья память
+
 import itertools
 from itertools import chain
 combinations = []
