@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df20d190-fb42-4b36-a452-611411a8e06c" name="Default Changelist" comment="labs">
-      <change afterPath="$PROJECT_DIR$/17/src/17.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pythonProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/18/src/18.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/11/src/11.py" beforeDir="false" afterPath="$PROJECT_DIR$/11/src/11.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/14/src/14.py" beforeDir="false" afterPath="$PROJECT_DIR$/14/src/14.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/15/src/15.py" beforeDir="false" afterPath="$PROJECT_DIR$/15/src/15.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617306664642</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="labs">
+      <created>1617361468778</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1617361468778</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

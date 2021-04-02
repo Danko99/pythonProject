@@ -1,18 +1,18 @@
+import collections
+
+
 # 17. Казино
 def Freq(b):
-    a_set = set(b)
-    most_common = None  # наиболее часто встречаемое значение
-    qty_most_common = 0  # его количество
-    # в цикле перебираются элементы (item) множества
-    for item in a_set:
-        # переменной qty присваивается количество случаев
-        # item в списке a
-        qty = b.count(item)
-        # Если это количество больше максимального,
-        if qty > qty_most_common:
-            qty_most_common = qty  # то заменяем на него максимальное,
-            most_common = item  # запоминаем само значение
-    return most_common
+    arr = collections.Counter(b).most_common()
+    tempArr = []
+    itemMax = arr[0][1]
+    for i in arr:
+        if i[1] > itemMax:
+            itemMax = i[1]
+    for item in arr:
+        if item[1] == itemMax:
+            tempArr.append(item[0])
+    return tempArr
 
 
 red = [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36]  # Список черных номеров
@@ -28,7 +28,7 @@ while i < 36:
     if n < 0:
         break
     elem.append(n)
-    print(Freq(elem))  # Чаще всего за все игры
+    print(*Freq(elem), sep=" ")  # Чаще всего за все игры
     if not_most_frequent.__contains__(n):
         not_most_frequent.remove(n)
     if red.__contains__(n):
