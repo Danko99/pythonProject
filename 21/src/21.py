@@ -17,6 +17,7 @@ def print_bmi(bmi: float):
         print('Obesity')
 
 
-
-bmi(85, 185)
+weight, height = map(float,input().split())
+height/=100
+bmi(weight, height)
 print_bmi(bmi)
