@@ -20,14 +20,6 @@ if __name__ == '__main__':
 
     output = {}
 
-    with open('in.json', 'r') as file:
-        data = json.loads(file.read())
-
-        for i in data:
-            if i['userId'] in output:
-                output[i['userId']].task_completed += (0, 1)[i['completed']]
-            else:
-                output[i['userId']] = UserTask(i['userId'], (0, 1)[i['completed']])
 
     class CustomEncoder(json.JSONEncoder):
         def default(self, o):
@@ -37,3 +29,15 @@ if __name__ == '__main__':
 
     with open('out.json', 'w') as file:
         json.dump(output, file, cls=CustomEncoder)
+    with open('in.json', 'r') as file:
+
+        data = json.loads(file.read())
+
+        for i in data:
+            if i['userId'] in output:
+                output[i['userId']].task_completed += (0, 1)[i['completed']]
+            else:
+                output[i['userId']] = UserTask(i['userId'], (0, 1)[i['completed']])
+
+
+
