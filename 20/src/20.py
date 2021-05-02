@@ -8,9 +8,6 @@ class Alchohol:
     last_money = 0
 
     def check_price(self):
-        if(money<self.price):
-            print("-1")
-            exit()
         z = self.price
         while z < money:
             self.final_price += self.price
@@ -42,6 +39,9 @@ while i < k:
     alco[i].check_price()
     arr_v.append(alco[i].final_v)
     i += 1
-
-max=arr_v.index(max(arr_v))
-alco[max].display_info()
+max_=max(arr_v);
+if(max_==0):
+    print("-1")
+    exit()
+max_ind=arr_v.index(max(arr_v))
+alco[max_ind].display_info()
