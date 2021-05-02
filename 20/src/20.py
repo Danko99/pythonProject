@@ -1,24 +1,20 @@
-money = int(input())
-
-
 class Alchohol:
     name = ''
     price = 0
     v = 0
     final_price = price
     final_v = v
-    numb_of_bottle=0
-    last_money=0
+    numb_of_bottle = 0
+    last_money = 0
 
     def check_price(self):
         z = self.price
         while z < money:
             self.final_price += self.price
-            self.final_v+=self.v
-            self.numb_of_bottle+=1
+            self.final_v += self.v
+            self.numb_of_bottle += 1
             z += self.price
-        self.last_money=money-self.final_price
-
+        self.last_money = money - self.final_price
 
     def display_info(self):
         print(self.name, self.numb_of_bottle)
@@ -26,7 +22,9 @@ class Alchohol:
         print(self.last_money)
 
 
+money = int(input())
 k = int(input())
+arr_v=[]
 
 alco = []
 for i in range(k):
@@ -36,10 +34,11 @@ i = 0
 
 while i < k:
     alco[i].name, alco[i].price, alco[i].v = input().split()
-    alco[i].price=int(alco[i].price)
+    alco[i].price = int(alco[i].price)
     alco[i].v = int(alco[i].v)
     alco[i].check_price()
+    arr_v.append(alco[i].final_v)
     i += 1
 
-
-alco[0].display_info()
+max=arr_v.index(max(arr_v))
+alco[max].display_info()
