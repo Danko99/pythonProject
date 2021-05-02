@@ -1,3 +1,4 @@
+#20. Истина в вине
 class Alchohol:
     name = ''
     price = 0
