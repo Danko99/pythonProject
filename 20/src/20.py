@@ -1,22 +1,29 @@
-#20. Истина в вине
+class Alchohol:
+    name = ''
+    price = 1
+    v = 1
+    final_price=0
+    final_v=0
+
+    def check_price(self):
+
+
+
+
+
+        print(self.name)
+
+    def display_info(self):
+        print(self.name)
+
+
 money = int(input())
-count = int(input())
+k = int(input())
+alco = [Alchohol()]
+i = 0
 
-arr = [input().split() for i in range(0, count)]
-priceArr = []
-canBuy = True
-for i in arr:
-    i[1] = float(i[1])
-    i[2] = float(i[2])
-    priceArr.append(i[1] / i[2])
+while i < k:
+    alco[i].name, alco[i].price, alco[i].v = input().split()
+    i += 1
 
-minPriceIndex = arr.index(arr[priceArr.index(min(priceArr))])
-print(arr[minPriceIndex][0], end=" ")
-temp = 0
-bollleCount = 0
-while temp <= money - arr[minPriceIndex][1]:
-    temp += arr[minPriceIndex][1]
-    bollleCount += 1
-print(bollleCount)
-print(bollleCount * arr[minPriceIndex][2])
-print(money - temp)
+alco[0].display_info()
