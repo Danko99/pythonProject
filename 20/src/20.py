@@ -8,6 +8,9 @@ class Alchohol:
     last_money = 0
 
     def check_price(self):
+        if(money<self.price):
+            print("-1")
+            exit()
         z = self.price
         while z < money:
             self.final_price += self.price
