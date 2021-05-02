@@ -24,7 +24,7 @@ class Alchohol:
 
 money = int(input())
 k = int(input())
-arr_v=[]
+arr_v = []
 
 alco = []
 for i in range(k):
@@ -39,9 +39,9 @@ while i < k:
     alco[i].check_price()
     arr_v.append(alco[i].final_v)
     i += 1
-max_=max(arr_v);
-if(max_==0):
+max_ = max(arr_v);
+if (max_ == 0):
     print("-1")
     exit()
-max_ind=arr_v.index(max(arr_v))
+max_ind = arr_v.index(max(arr_v))
 alco[max_ind].display_info()
