@@ -1,8 +1,4 @@
-import numpy as np
-
 bool_val = True
-
-
 class Alchohol:
     name = ''
     price = 0
@@ -81,7 +77,7 @@ while bool_val:
         if bool_arr[j]==False:
             alco[j].final_v=0
             alco[j].final_price=0
-            alco[j].numb_of_bottle = 0
+            alco[j].numb_of_bottle =0
         j+=1
 
     if bool_arr.count(True) == k:
@@ -92,7 +88,7 @@ while bool_val:
 output_v = 0
 x = 0
 while x < len(bool_arr):
-    if bool_arr[x] == True:
+    if bool_arr[x] == True and alco[x].numb_of_bottle!=0:
         print(alco[x].name, alco[x].numb_of_bottle)
         output_v = output_v + alco[x].final_v
     x += 1
@@ -105,5 +101,5 @@ print(l_money)
 
 if bool_arr.count(False) == k:
     print("-1")
-    exit();
+    exit()
 
