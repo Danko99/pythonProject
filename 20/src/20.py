@@ -1,4 +1,8 @@
-#20. Истина в вине
+import numpy as np
+
+bool_val = True
+
+
 class Alchohol:
     name = ''
     price = 0
@@ -9,13 +13,23 @@ class Alchohol:
     last_money = 0
 
     def check_price(self):
-        z = self.price
-        while z < money:
-            self.final_price += self.price
-            self.final_v += self.v
-            self.numb_of_bottle += 1
-            z += self.price
-        self.last_money = money - self.final_price
+        self.numb_of_bottle = 0
+        global l_money
+        global bool_val
+        if self.price > l_money:
+            bool_val = False
+            self.final_v=0
+
+        else:
+            z = self.price
+            while z < l_money:
+                self.final_price += self.price
+                self.final_v += self.v
+                self.numb_of_bottle += 1
+                z += self.price
+            self.last_money = l_money - self.final_price
+
+
 
     def display_info(self):
         print(self.name, self.numb_of_bottle)
@@ -24,25 +38,73 @@ class Alchohol:
 
 
 money = int(input())
+l_money = money
 k = int(input())
 arr_v = []
-
+for i in range(k):
+    arr_v.append(0)
+bool_arr = []  # Не уверен[False]*k
+for i in range(k):
+    bool_arr.append(False)
 alco = []
 for i in range(k):
     alco.append(Alchohol())
 
+boolean_for_cicle = True
+max_ = 0
+max_ind = 0
 i = 0
+while bool_val:
+    while i < k:
 
-while i < k:
-    alco[i].name, alco[i].price, alco[i].v = input().split()
-    alco[i].price = int(alco[i].price)
-    alco[i].v = int(alco[i].v)
-    alco[i].check_price()
-    arr_v.append(alco[i].final_v)
-    i += 1
-max_ = max(arr_v);
-if (max_ == 0):
+        if boolean_for_cicle:
+            alco[i].name, alco[i].price, alco[i].v = input().split()
+            alco[i].price = int(alco[i].price)
+            alco[i].v = int(alco[i].v)
+
+        if bool_arr[i] == False:
+            alco[i].check_price()
+            arr_v.insert(i, alco[i].final_v)
+            max_ = max(arr_v)
+            max_ind = arr_v.index(max(arr_v))
+
+        if i == k - 1:
+            bool_arr[max_ind] = True
+            l_money = alco[max_ind].last_money
+            boolean_for_cicle = False
+
+        i += 1
+
+    max_ = 0
+    max_ind = 0
+    arr_v.clear()
+    for i_ in range(k):
+        arr_v.append(0)
+
+
+    if bool_arr.count(False) > 0:
+        alco[bool_arr.index(False)].final_v = alco[bool_arr.index(False)].v
+
+
+
+    if bool_arr.count(True) == k:
+        bool_val=False
+
+    i = 0
+    #print(bool_arr)
+
+
+output_v=0
+x =0
+while x < len(bool_arr):
+    if bool_arr[x] ==True:
+        print(alco[x].name, alco[x].numb_of_bottle)
+    x+=1
+
+
+
+#alco[max_ind].display_info()
+
+if list(filter(lambda x: x == False, bool_arr)):
     print("-1")
     exit()
-max_ind = arr_v.index(max(arr_v))
-alco[max_ind].display_info()
