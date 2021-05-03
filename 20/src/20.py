@@ -105,5 +105,5 @@ print(l_money)
 
 if bool_arr.count(False) == k:
     print("-1")
-    exit()
+    exit();
 
