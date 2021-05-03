@@ -28,12 +28,6 @@ class Alchohol:
                 z += self.price
             self.last_money = l_money - self.final_price
 
-    def display_info(self):
-        print(self.name, self.numb_of_bottle)
-        print(self.final_v)
-        print(self.last_money)
-
-
 money = int(input())
 l_money = money
 k = int(input())
@@ -94,7 +88,6 @@ while bool_val:
         bool_val = False
 
     i = 0
-    # print(bool_arr)
 
 output_v = 0
 x = 0
@@ -108,13 +101,7 @@ while x < len(bool_arr):
 
 print(output_v)
 print(l_money)
-#print(alco[0].final_v)
-#print(alco[1].final_v)
 
-
-
-
-# alco[max_ind].display_info()
 
 if bool_arr.count(False) == k:
     print("-1")
