@@ -13,23 +13,21 @@ class Alchohol:
     last_money = 0
 
     def check_price(self):
-        self.numb_of_bottle = 0 # Где обнулить?
+        #self.numb_of_bottle = 0  # Где обнулить?
         global l_money
         global bool_val
         if self.price > l_money:
             bool_val = False
-            self.final_v=0
+            self.final_v = 0
 
         else:
             z = self.price
-            while z < l_money:
+            while z <= l_money:
                 self.final_price += self.price
                 self.final_v += self.v
                 self.numb_of_bottle += 1
                 z += self.price
             self.last_money = l_money - self.final_price
-
-
 
     def display_info(self):
         print(self.name, self.numb_of_bottle)
@@ -62,7 +60,7 @@ while bool_val:
             alco[i].price = int(alco[i].price)
             alco[i].v = int(alco[i].v)
 
-        if bool_arr[i] == False:
+        if not bool_arr[i]:
             alco[i].check_price()
             arr_v.insert(i, alco[i].final_v)
             max_ = max(arr_v)
@@ -72,6 +70,9 @@ while bool_val:
             bool_arr[max_ind] = True
             l_money = alco[max_ind].last_money
             boolean_for_cicle = False
+            if max_ == 0:
+                bool_val=False
+                break
 
         i += 1
 
@@ -81,30 +82,24 @@ while bool_val:
     for i_ in range(k):
         arr_v.append(0)
 
-
     if bool_arr.count(False) > 0:
         alco[bool_arr.index(False)].final_v = alco[bool_arr.index(False)].v
 
-
-
     if bool_arr.count(True) == k:
-        bool_val=False
+        bool_val = False
 
     i = 0
-    #print(bool_arr)
+    # print(bool_arr)
 
-
-output_v=0
-x =0
+output_v = 0
+x = 0
 while x < len(bool_arr):
-    if bool_arr[x] ==True:
+    if bool_arr[x] == True:
         print(alco[x].name, alco[x].numb_of_bottle)
-    x+=1
+    x += 1
 
+# alco[max_ind].display_info()
 
-
-#alco[max_ind].display_info()
-
-if list(filter(lambda x: x == False, bool_arr)):
+if bool_arr.count(False) == k:
     print("-1")
     exit()
