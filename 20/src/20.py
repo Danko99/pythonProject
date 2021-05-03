@@ -13,7 +13,7 @@ class Alchohol:
     last_money = 0
 
     def check_price(self):
-        self.numb_of_bottle = 0
+        self.numb_of_bottle = 0 # Где обнулить?
         global l_money
         global bool_val
         if self.price > l_money:
