@@ -13,8 +13,6 @@ class Alchohol:
     last_money = 0
 
     def check_price(self):
-        # self.numb_of_bottle = 0  # Где обнулить?
-        #self.final_price=self.price # Где назначить?
         global l_money
         global bool_val
         if self.price > l_money or l_money < 0:
@@ -53,6 +51,7 @@ boolean_for_cicle = True
 max_ = 0
 max_ind = 0
 i = 0
+
 while bool_val:
     while i < k:
 
@@ -83,9 +82,13 @@ while bool_val:
     for i_ in range(k):
         arr_v.append(0)
 
-    if bool_arr.count(False) > 0:
-        alco[bool_arr.index(False)].final_v = alco[bool_arr.index(False)].v
-        #alco[bool_arr.index(False)].final_price = alco[bool_arr.index(False)].price
+    j = 0
+    while j<len(bool_arr):
+        if bool_arr[j]==False:
+            alco[j].final_v=0
+            alco[j].final_price=0
+            alco[j].numb_of_bottle = 0
+        j+=1
 
     if bool_arr.count(True) == k:
         bool_val = False
@@ -101,11 +104,19 @@ while x < len(bool_arr):
         output_v = output_v + alco[x].final_v
     x += 1
 
+
+
 print(output_v)
 print(l_money)
+#print(alco[0].final_v)
+#print(alco[1].final_v)
+
+
+
 
 # alco[max_ind].display_info()
 
 if bool_arr.count(False) == k:
     print("-1")
     exit()
+
