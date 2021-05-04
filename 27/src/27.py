@@ -7,7 +7,7 @@ i=0
 while i < len(array):
     j=0
     temp_array.append(array[i])
-    temp_array.sort(reverse=True)
+    sorted(temp_array, reverse=True)
     while j<len(temp_array):
         if len(temp_array) > 5:
             temp_array.remove(temp_array[j])
