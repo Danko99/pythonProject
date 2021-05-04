@@ -12,11 +12,12 @@ while d * d <= n:
             d += 1
 factors.append(n)
 f_factors = Counter(factors)
+
 str = str(f_factors)
-str = str.replace("Counter(", "", len(f_factors))
-str = str.replace(")", "", len(f_factors))
-str = str.replace("{", "", len(f_factors))
-str = str.replace("}", "", len(f_factors))
+str = str.replace("Counter(", "")
+str = str.replace(")", "")
+str = str.replace("{", "")
+str = str.replace("}", "")
 str = str.replace(": 1", "", len(f_factors))
 str = str.replace(", ", "*", len(f_factors))
 str = str.replace(": ", "^", len(f_factors))
