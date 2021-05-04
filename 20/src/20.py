@@ -1,4 +1,5 @@
 bool_val = True
+
 class Alchohol:
     name = ''
     price = 0
@@ -24,13 +25,14 @@ class Alchohol:
                 z += self.price
             self.last_money = l_money - self.final_price
 
+
 money = int(input())
 l_money = money
 k = int(input())
 arr_v = []
 for i in range(k):
     arr_v.append(0)
-bool_arr = []  # Не уверен[False]*k
+bool_arr = []
 for i in range(k):
     bool_arr.append(False)
 alco = []
@@ -65,7 +67,6 @@ while bool_val:
                 break
 
         i += 1
-
     max_ = 0
     max_ind = 0
     arr_v.clear()
@@ -73,12 +74,12 @@ while bool_val:
         arr_v.append(0)
 
     j = 0
-    while j<len(bool_arr):
-        if bool_arr[j]==False:
-            alco[j].final_v=0
-            alco[j].final_price=0
-            alco[j].numb_of_bottle =0
-        j+=1
+    while j < len(bool_arr):
+        if bool_arr[j] == False:
+            alco[j].final_v = 0
+            alco[j].final_price = 0
+            alco[j].numb_of_bottle = 0
+        j += 1
 
     if bool_arr.count(True) == k:
         bool_val = False
@@ -88,18 +89,14 @@ while bool_val:
 output_v = 0
 x = 0
 while x < len(bool_arr):
-    if bool_arr[x] == True and alco[x].numb_of_bottle!=0:
+    if bool_arr[x] == True and alco[x].numb_of_bottle != 0:
         print(alco[x].name, alco[x].numb_of_bottle)
         output_v = output_v + alco[x].final_v
     x += 1
 
-
-
 print(output_v)
 print(l_money)
-
 
 if bool_arr.count(False) == k:
     print("-1")
     exit()
-
