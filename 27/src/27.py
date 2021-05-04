@@ -1,5 +1,5 @@
 #27. TOP — 5 минимальных
-n = int(input("n = "))
+n = int(input())
 n_= map(int, input().split())
 array=list(n_)
 temp_array=[]
@@ -13,7 +13,7 @@ while i < len(array):
             temp_array.remove(temp_array[j])
         j+=1
     i+=1
-    print(temp_array)
+    print(*temp_array, sep=" ")
 
 
 
