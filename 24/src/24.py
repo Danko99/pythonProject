@@ -1,43 +1,30 @@
+#24. Работа с json
 import json
 
+with open('in.json') as f:
+    templates = json.load(f)
 
-class UserTask:
-    userId = 0
-    task_completed = 0
+count = {}
 
-    def __init__(self, user_id, task_complete):
-        self.userId = user_id
-        self.task_completed = task_complete
-
-    def tojson(self):
-        return {
-            "userId": self.userId,
-            "task_completed": self.task_completed
-        }
-
-
-if __name__ == '__main__':
-
-    output = {}
+for todo in templates:
+    if todo["completed"]:
+        try:
+            # Увеличение количества существующих пользователей.
+            count[todo["userId"]] += 1
+        except KeyError:
+            # Новый пользователь, ставим кол-во 1.
+            count[todo["userId"]] = 1
 
 
-    class CustomEncoder(json.JSONEncoder):
-        def default(self, o):
-            if "tojson" in dir(o):
-                return o.tojson()
-            return json.JSONEncoder.default(self, o)
+list = []
 
-    with open('out.json', 'w') as file:
-        json.dump(output, file, cls=CustomEncoder)
-    with open('in.json', 'r') as file:
+for key in count:
+    dict_out = {}
+    dict_out["task_completed"] = count[key]
+    dict_out["userId"] = key
+    list.append(dict_out)
 
-        data = json.loads(file.read())
-
-        for i in data:
-            if i['userId'] in output:
-                output[i['userId']].task_completed += (0, 1)[i['completed']]
-            else:
-                output[i['userId']] = UserTask(i['userId'], (0, 1)[i['completed']])
-
+with open("out.json", "w") as write_file:
+    json.dump(list, write_file)
 
 
