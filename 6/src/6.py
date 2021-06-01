@@ -5,6 +5,10 @@ a = float(input("a = "))
 b = float(input("b = "))
 c = float(input("c = "))
 discrim= pow(b,2) - 4 * a * c
+if a == 0:
+    x = -c / b
+    print("x =", x)
+    exit(0)
 print(f'Дискриминант D = {discrim}')
 if discrim > 0:
     x1 = (-b + math.sqrt(discrim)) / (2 * a)
