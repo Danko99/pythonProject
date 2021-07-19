@@ -1,0 +1,38 @@
+from anytree import Node,RenderTree
+n = int(input())
+nodes={}
+instruction = []
+get_scope = []
+Scope = {}
+for i in range(n):
+    instruction = [i for i in input().split()]
+    if instruction[0] == "add":
+        if instruction[1] not in Scope.keys():
+            Scope[instruction[1]] = []
+        Scope[instruction[1]] += [instruction[2]]
+    if instruction[0] == "create":
+        if instruction[2] not in nodes.keys():
+            nodes[instruction[2]] = []
+        nodes[instruction[2]]+=[instruction[1]]
+    if instruction[0] == "get":
+
+
+
+
+    # if instruction[0]=="create":
+    #     if instruction[2] not in Scope.keys():
+    #         Scope[instruction[2]] = []
+    #     Scope[instruction[2]]+=[instruction[1]]
+    #
+    #
+    # if instruction[0] == "get":
+    #     for z in Scope.values():
+    #        if instruction[2] not in z:
+    #            temp.append("None")
+    #        if instruction[2] in z:
+    #             for j in Scope.keys():
+    #                 temp.append(j)
+
+
+print(Scope)
+print(nodes)
