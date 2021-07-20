@@ -4,15 +4,19 @@ Schedule["Английский"] = [9.30, 10.30]
 Schedule["Математика"] = [10.00, 11.00]
 Schedule["Информатика"] = [10.30, 11.30]
 Schedule["Музыка"] = [11.00, 12.00]
-result = [Schedule["Рисование"]]
+
+result = [value for value in Schedule.values()]
+del result[1:]
+
 Schedule_temp = Schedule.copy()
 
-del Schedule_temp["Рисование"]
-# for key in Schedule_temp.keys():
-#     if result[0] in Schedule_temp.values():
-#         del Schedule_temp[key]
-#         break
+for key in Schedule_temp.keys():
+    if result[0] in Schedule_temp.values():
+        del Schedule_temp[key]
+        break
+
 tmp = []
+
 for i in result:
     for j in range(len(i)):
         tmp.append(i[j])
