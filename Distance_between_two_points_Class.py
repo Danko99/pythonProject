@@ -25,6 +25,6 @@ class Point:
 p1 = Point()
 p2 = Point()
 p1.set_coordinates(1, 2, 8)
-p2.set_coordinates(4, 6, 7)
+p2.set_coordinates(4, 6, 2)
 print(p2.get_distance(p1))
 
