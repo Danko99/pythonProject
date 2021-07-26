@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df20d190-fb42-4b36-a452-611411a8e06c" name="Default Changelist" comment="Distance_between_two_points_Class">
-      <change beforePath="$PROJECT_DIR$/class_practice" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/phone_book.py" beforeDir="false" afterPath="$PROJECT_DIR$/phone_book.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -405,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626899798000</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Phone book implementation">
+      <created>1627336698311</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1627336698311</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -429,7 +436,8 @@
     <MESSAGE value="labs" />
     <MESSAGE value="Greedy_algorithm" />
     <MESSAGE value="Distance_between_two_points_Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Distance_between_two_points_Class" />
+    <MESSAGE value="Phone book implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Phone book implementation" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1626899822498">
@@ -468,10 +476,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="741" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626899813334" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1626807846698">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1627336700458">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1626807846698" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1627336700458" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1626889262967">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
